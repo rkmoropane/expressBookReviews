@@ -1,5 +1,4 @@
-`curl curl https://rkmoropane-5000.theianext-0-lab
-s-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/
+`curl -X GET https://rkmoropane-5000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/
 {
     "1": {
         "author": "Chinua Achebe",
@@ -51,5 +50,4 @@ s-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/
         "title": "Molloy, Malone Dies, The Unnamable, the trilogy",
         "reviews": {}
     }
-}
-`
+}`

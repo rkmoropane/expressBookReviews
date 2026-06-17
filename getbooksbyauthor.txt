@@ -1,5 +1,5 @@
-`curl https://rkmoropane-5000.theianext-0-lab
-s-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/author/Unknown
+`curl -X GET https://rkmoropane-5000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/author/Un
+known
 {
     "4": {
         "author": "Unknown",
@@ -21,5 +21,4 @@ s-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/author/Unknown
         "title": "Njál's Saga",
         "reviews": {}
     }
-} 
-`
+}`
