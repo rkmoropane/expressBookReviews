@@ -1,0 +1,2 @@
+`curl -X POST https://rkmoropane-5000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/register -H "Content-Type: application/json" -d '{"username":"user02","password":"pass02"}'
+{"message":"User successfully registered"}`
