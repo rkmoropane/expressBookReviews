@@ -1,4 +1,3 @@
-`curl -X POST https://rkmoropane-5000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/customer/login \
--H "Content-Type: application/json" \
--d '{"username":"Kholo123","password":"Kholo12345"}'
+`curl -c cookies.txt -X POST https://rkmoropane-5000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/customer/login -H "Content-Type: application/json" -d '{"username":"Kholo123","password":"Kholo12345"}'
+
 User successfully logged in`

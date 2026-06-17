@@ -1,0 +1,2 @@
+curl -b cookies.txt -X DELETE "https://rkmoropane-5000.theianext-0-labs-prod-misc-tools-us-east-0.proxy.cognitiveclass.ai/customer/auth/review/1"
+{"message":"Review deleted successfully","reviews":{}}
