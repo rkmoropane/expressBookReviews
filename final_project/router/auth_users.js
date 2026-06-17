@@ -54,7 +54,7 @@ regd_users.post("/login", (req,res) => {
             message: 'Invalid username or password'
         });
     }
-  return res.status(300).json({message: "Yet to be implemented"});
+
 });
 
 // Add a book review
@@ -63,6 +63,10 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
     const isbn = req.params.isbn;
     const review = req.query.review;
     
+    // ✅ SAFE session check
+    if (!req.session.authorization) {
+        return res.status(403).json({ message: "User not logged in" });
+    }
     // 1. Get username from session
     const username = req.session.authorization.username;
     
@@ -92,6 +96,10 @@ regd_users.put("/auth/review/:isbn", (req, res) => {
 regd_users.delete('/auth/review/:isbn', (req, res) => {
     const isbn = req.params.isbn;
 
+    // ✅ SAFE session check
+    if (!req.session.authorization) {
+        return res.status(403).json({ message: "User not logged in" });
+    }
     // 1. Get logged-in username from session
     const username = req.session.authorization.username;
     

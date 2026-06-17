@@ -104,29 +104,22 @@ public_users.get('/isbn/:isbn', async function (req, res) {
 public_users.get('/author/:author', async function (req, res) {
     //Write your code here
     try {
-
         const authorName = req.params.author;
-    
         const getBooksByAuthor = async () => {
             return new Promise((resolve) => {
-    
                 let result = {};
-    
                 const allBooks = Object.keys(books);
     
                 allBooks.forEach((isbn) => {
-    
                     if (books[isbn].author === authorName) {
                         result[isbn] = books[isbn];
-                    }
-    
+                    } 
                 });
     
                 resolve(result);
     
             });
         };
-    
         const data = await getBooksByAuthor();
     
         if (Object.keys(data).length > 0) {
@@ -136,9 +129,7 @@ public_users.get('/author/:author', async function (req, res) {
                 message: 'No books found for this author'
             });
         }
-    
     } catch (error) {
-    
         return res.status(500).json({
             message: 'Error retrieving books'
         });
@@ -150,26 +141,20 @@ public_users.get('/author/:author', async function (req, res) {
 public_users.get('/title/:title', async function (req, res) {
     //Write your code here
     try {
-
         const titleName = req.params.title;
-    
+
         const getBooksByTitle = async () => {
             return new Promise((resolve) => {
-    
                 let result = {};
-    
                 const allBooks = Object.keys(books);
     
                 allBooks.forEach((isbn) => {
-    
                     if (books[isbn].title === titleName) {
                         result[isbn] = books[isbn];
                     }
-    
                 });
     
                 resolve(result);
-    
             });
         };
     
@@ -184,13 +169,10 @@ public_users.get('/title/:title', async function (req, res) {
         }
     
     } catch (error) {
-    
         return res.status(500).json({
             message: 'Error retrieving books'
         });
-    
     }
-
 });
 
 //  Get book review
